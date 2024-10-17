@@ -1,0 +1,453 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --mainpadding:40px;
+    --mainmargin-top:40px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f8ff87;
+}
+.top{
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.top a{
+    font-weight: 600;
+    color: white;
+}
+@media(max-width: 767px){
+    .top{
+        display: none;
+    }
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+   
+
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+   
+}
+ul li{
+    margin-left: 20px;
+}
+ul li a{
+    text-decoration: none;
+}
+.search{
+    position: relative;
+}
+.search input{
+    width: 200px;
+    border-radius: 10px;
+    height: 30px;
+    border-color: transparent;
+    background: #eeeeee61;
+}
+.search i{
+    position: absolute;
+    outline: none;
+    bottom: 6px;
+    right: 3px;
+}
+.title{
+    margin-top: var(--mainmargin-top);
+    padding: var(--mainpadding) ;
+    color: grey;
+}
+.title span{
+    font-weight:bold;
+    color: black;
+}
+.heading .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100px;
+    font-size: 20px;
+}
+.heading > i{
+    font-size:20px; 
+    display:none;
+}
+@media(max-width:767px){
+    .heading i{
+        display: block;
+    }
+    .heading .icons,
+    .heading .search,
+    .heading .nav{
+        display: none;
+    }
+}
+.container{
+    margin-top: var(--mainmargin-top);
+    padding: var(--mainpadding);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media(max-width: 992px){
+    .container{
+       justify-content: center;
+       align-items: center;
+    }
+}
+.container .pics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
+.container .pics img{
+    width: 200px;
+    height: 140px;
+}
+.container .mainPic img{
+    width: 500px;
+    height: 600px;
+}
+@media(max-width:767px){
+    .container .mainPic img{
+        width: 450px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+.container.section{
+    background-color: white;
+}
+.container .section p{
+    width: 400px;
+    
+}
+.section h2,
+.section h4,
+.section p{
+    margin-bottom: 20px;
+}
+.container .section .up .stars {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 15px;
+
+}
+.container .section .up .stars .rate .checked{
+    color: orange;
+}
+.container .section .up .stars .one{
+    color: grey;
+    position: relative;
+}
+.container .section .up .stars .one::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right: -10px;
+    background-color: grey;
+}
+
+.container .section .up .stars .two{
+    color: lawngreen;
+}
+
+.container .colors{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 115px;
+}
+.colors ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.colors ul li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    
+}
+.colors ul li:hover{
+    outline: 1px solid black;
+}
+.colors ul li.one{
+    background-color: rgb(223, 132, 147);
+
+}
+.colors ul li.two{
+    background-color:rgb(86, 86, 179);
+}
+.container .size{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container .section .size .sizes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+
+}
+.container .section .size .sizes button{
+    border: .5px solid rgb(122, 121, 121);
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px;
+}
+
+.container .section .size .sizes button:hover{
+    background-color: red;
+    border-color: transparent;
+    color: white;
+}
+
+
+.container .bye{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr) 50px;
+    gap: 20px;
+    height: 40px;
+}
+.container .bye .box{
+    display: flex;
+    flex-direction: row;
+
+}
+.container .bye .box button{
+    border: .5px solid rgb(122, 121, 121);
+    width: 40px;
+    border-radius: 6px;
+    text-align: center;
+}
+.container .bye button{
+    border: .5px solid rgb(122, 121, 121);
+    border-radius: 3px;
+}
+.container .bye button:hover{
+    background-color: red;
+    border-color: transparent;
+    color: white;
+}
+.container .section .bye i{
+    border: 1px solid darkgray;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    border-radius: 6px;
+}
+.container .cont{
+    margin-top: 25px;
+
+}
+.container .cont .box1{
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+.container .cont .box1 i{
+    margin-left: 30px;
+    font-size:20px;
+}
+.container .cont .box1 .test p{
+    margin-top: 20px ;
+    margin-left: 50px;
+    font-size: 12px;
+}
+.container .cont .box1 .test h5{
+    margin-top: 20px ;
+    margin-left: 50px;
+}
+.h3{
+    position: relative;
+}
+.h3 h3{
+    margin-top: 100px;
+    padding-left: 80px;
+    color: red;
+ 
+}
+.h3 h3::before{
+    content: "";
+    position: absolute;
+    background-color: red;
+    width: 10px;
+    height: 100%;
+    left: 40px;
+}
+.grid{
+    margin-top: 40px;
+    padding-left: var(--mainpadding);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+@media(max-width:992px){
+    .grid{
+        margin-left: 60px;
+    }
+}
+.grid .cont .img{
+    position: relative;
+}
+.grid .cont .img img{
+    width: 250px;
+    height: 250px;
+   
+}
+@media(max-width:992px){
+    .grid .cont .img i,
+    .grid .cont .img button{
+        display: none;
+    }
+}
+.grid .cont .img i{
+    position: absolute;
+    right: 57px;
+    bottom: 25px;
+    color: red;
+    font-size: 26px;
+}
+.grid .cont .img .one{
+    position: absolute;
+    bottom: 56px;
+}
+.grid .cont .img button{
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    background-color: #ff000094;
+    border-color: transparent;
+    border-radius: 4px;
+    width: 50px;
+}
+
+.grid .cont .img + p{
+        background-color: black;
+        color: white;
+        width: 250px;
+        padding: 5px;
+        position: absolute;
+        margin-top: -24px;
+        text-align: center;
+        transition:  1s;
+        display: none;
+}
+.grid .cont .img:hover +p{
+    display: block;
+}
+.grid .cont .text{
+    margin-top: -5px;
+    background-color: #eeeeee6e;
+    width: 250px;
+    padding: 20px;
+}
+.grid .cont .text p{
+    margin-top: 15px;
+}
+.grid .cont .rate{
+    margin-top: 15px;
+}
+.grid .cont .rate .checked{
+    color: orange;
+
+}
+
+.footer{
+    margin-top: 40px;
+    padding-left: var(--mainpadding);
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    height: 250px;
+}
+@media(max-width:992px){
+    .footer{
+        width: 100%;
+    }
+    .footer .two,
+    .footer .three,
+    .footer .four,
+    .footer .five{
+        display: none;
+    }
+}
+.footer .one h4,
+.footer .one h5,
+.footer .one p,
+.footer .one input{
+    margin-bottom: 20px;
+}
+.footer .two h4,
+.footer .two p{
+    margin-bottom: 15px;
+}
+.footer .three h4,
+.footer .three p{
+    margin-bottom: 10px;
+}
+
+.footer .four h4,
+.footer .four p{
+    margin-bottom: 15px;
+}
+.footer .five h4,
+.footer .five p,
+.footer .five .icons{
+    margin-bottom: 25px;
+}
+.footer .five .icons i{
+    margin-left: 10px;
+}
+.footer .five .icons i:hover{
+    color: red;
+}
+
